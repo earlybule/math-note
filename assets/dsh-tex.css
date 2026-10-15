@@ -1,0 +1,45 @@
+/* dsh-tex.css — styling for the LaTeX-subset renderer (uses system fonts + Unicode maths) */
+.tx { font-family: "Cambria Math", "Latin Modern Math", "STIX Two Math", Cambria, Georgia, "Times New Roman", "Microsoft YaHei", serif; line-height: 1.45; }
+.tx-display { display: block; margin: 8px 0 10px; text-align: center; }
+
+.tx-frac { display: inline-flex; flex-direction: column; vertical-align: middle; text-align: center; margin: 0 .18em; font-size: .96em; }
+.tx-frac > .tx-num { border-bottom: 1px solid currentColor; padding: 0 .25em .05em; }
+.tx-frac > .tx-den { padding: .05em .25em 0; }
+.tx-binom > .tx-num, .tx-binom > .tx-den { border: 0; padding: 0 .25em; }
+.tx-binom { border-left: 1px solid currentColor; border-right: 1px solid currentColor; border-radius: 3px; padding: 0 .1em; }
+
+.tx-sqrt { display: inline-flex; align-items: flex-start; }
+.tx-sqrt > .tx-radical { padding-right: .06em; }
+.tx-sqrt > .tx-radicand { border-top: 1px solid currentColor; padding: .06em .18em 0 .06em; }
+.tx-root { font-size: .62em; vertical-align: .55em; margin-right: -.55em; }
+
+.tx-script { display: inline-block; position: relative; }
+.tx-sup, .tx-sub { font-size: .68em; line-height: 1; position: relative; }
+.tx-sup { top: -.55em; }
+.tx-sub { bottom: -.28em; }
+/* limits stacked above/below big operators */
+.tx-limits { display: inline-flex; flex-direction: column; align-items: center; vertical-align: middle; }
+.tx-limits > .tx-sup { top: auto; order: 0; }
+.tx-limits > .tx-sub { bottom: auto; order: 2; }
+.tx-limits > .tx-bigop, .tx-limits > .tx-op { order: 1; }
+
+.tx-bigop { font-size: 1.5em; line-height: .9; }
+.tx-op { font-style: normal; padding-right: .12em; }
+.tx-opname { font-style: normal; }
+.tx-text { font-family: inherit; font-style: normal; padding: 0 .1em; }
+.tx-bf { font-weight: 700; }
+.tx-bf, .tx-cal { font-style: normal; }
+.tx-cal { font-family: "Cambria Math", Cambria, Georgia, serif; }
+.tx-delim { padding: 0 .06em; }
+.tx-big { font-size: 1.3em; line-height: .9; }
+.tx-sym { font-style: normal; }
+.tx-unknown { color: #c0392b; font-style: normal; }
+.tx-accent { display: inline-block; position: relative; }
+.tx-accent-mk { position: absolute; left: 0; right: 0; top: -.72em; text-align: center; font-size: .8em; }
+.tx-overline { border-top: 1px solid currentColor; padding-top: .06em; }
+.tx-underline { border-bottom: 1px solid currentColor; }
+
+.tx-matrix { display: inline-flex; align-items: center; vertical-align: middle; margin: 0 .15em; }
+.tx-matrix > .tx-mopen, .tx-matrix > .tx-mclose { font-size: 1.6em; line-height: 1; font-weight: 300; }
+.tx-mtab { border-collapse: collapse; margin: 0 .18em; }
+.tx-mtab td { padding: .12em .42em; text-align: center; }
